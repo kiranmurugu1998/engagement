@@ -58,7 +58,14 @@ body{
 .cover-eyebrow{font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-top:44px;font-weight:400;transition:opacity .5s}
 .cover-names{font-family:'Great Vibes',cursive;font-size:clamp(2.4rem,8vw,3.3rem);color:var(--taupe);margin-top:12px;transition:opacity .5s}
 .cover-date{font-size:.76rem;letter-spacing:.38em;color:var(--taupe-soft);margin-top:14px;text-transform:uppercase;transition:opacity .5s}
-.tap{margin-top:40px;font-size:.64rem;letter-spacing:.48em;text-transform:uppercase;color:var(--rose-deep);animation:blink 2.3s ease-in-out infinite}
+.tap{
+  margin-top:40px;display:inline-block;padding:14px 34px;border-radius:40px;
+  font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;font-weight:600;
+  color:#fff;background:linear-gradient(120deg,var(--rose-deep),var(--rose));
+  box-shadow:0 10px 26px rgba(192,139,132,.5);
+  animation:tapPulse 1.8s ease-in-out infinite;
+}
+@keyframes tapPulse{0%,100%{transform:scale(1);box-shadow:0 10px 26px rgba(192,139,132,.5)}50%{transform:scale(1.07);box-shadow:0 14px 34px rgba(192,139,132,.7)}}
 @keyframes blink{0%,100%{opacity:.4}50%{opacity:1}}
 #cover.open .cfade{opacity:0!important}
 

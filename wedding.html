@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiran &amp; Swetha — Wedding Invitation</title>
+<meta name="description" content="Wedding of Kiran & Swetha · Sunday, 25 October 2026 · Sri Hari Mahal A/C, Tindivanam">
+<meta property="og:title" content="Kiran & Swetha — Wedding Invitation">
+<meta property="og:description" content="Sunday, 25 October 2026 · Muhurtham 6:00–7:30 AM · Sri Hari Mahal A/C, Tindivanam.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#121113;
+  --charcoal:#1C1B1E;
+  --charcoal-2:#242227;
+  --gold:#C9A227;
+  --gold-soft:#E7CE7E;
+  --ivory:#FAF7F1;
+  --cream:#F1EADC;
+  --wine:#6E1423;
+  --ink:#2A2730;
+  --ink-soft:#716B63;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;font-weight:300;color:var(--ink);background:var(--ivory);overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600}
+a{color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto 0}
+.ornament .orn-line{width:50px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.ornament .orn-line:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.ornament .orn-flower{color:var(--gold);font-size:1.05rem;transform:translateY(-1px)}
+
+/* ================= NAV ================= */
+#nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;
+  padding:22px 32px;transition:background .4s ease,padding .4s ease,box-shadow .4s ease;}
+#nav.solid{background:rgba(18,17,19,.92);backdrop-filter:blur(6px);padding:14px 32px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.nav-mark{font-family:'Cormorant Garamond',serif;font-size:1.25rem;letter-spacing:.08em;color:#fff}
+.nav-mark b{color:var(--gold);font-weight:600}
+.nav-links{display:none;gap:30px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#F1EADC;}
+.nav-links a{color:#EFE8DC;text-decoration:none;position:relative;padding-bottom:6px;opacity:.85;transition:opacity .25s}
+.nav-links a::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:1px;background:var(--gold-soft);transition:width .3s ease,left .3s ease}
+.nav-links a:hover,.nav-links a.active{opacity:1;color:var(--gold-soft)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;left:0}
+@media(min-width:760px){.nav-links{display:flex}}
+
+/* ================= HERO ================= */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+#hero .bg{position:absolute;inset:0;overflow:hidden}
+#hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:kenBurns 22s ease-in-out infinite alternate}
+@keyframes kenBurns{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.16) translate(-1.5%,-1.5%)}}
+#hero .bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(18,17,19,.55),rgba(18,17,19,.72) 55%,rgba(18,17,19,.92));}
+.hero-inner{position:relative;z-index:2;color:#fff;padding:54px 50px;max-width:760px}
+.hero-inner::before,.hero-inner::after{content:"";position:absolute;width:38px;height:38px;
+  border-top:1px solid var(--gold-soft);border-left:1px solid var(--gold-soft);opacity:0;
+  animation:fadeUp 1s ease 1.2s forwards}
+.hero-inner::before{top:0;left:0}
+.hero-inner::after{bottom:0;right:0;border-top:none;border-left:none;
+  border-bottom:1px solid var(--gold-soft);border-right:1px solid var(--gold-soft)}
+.hero-eyebrow{font-size:.76rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold-soft);opacity:0;animation:fadeUp 1s ease .3s forwards}
+.hero-names{margin-top:22px;font-size:clamp(2.6rem,9vw,5.4rem);line-height:1.1;letter-spacing:.02em;opacity:0;animation:fadeUp 1s ease .55s forwards}
+.hero-amp{display:inline-block;font-style:italic;font-weight:400;color:var(--gold-soft);margin:0 .22em;font-size:.72em}
+.hero-sub{margin-top:20px;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:#D9D2C4;opacity:0;animation:fadeUp 1s ease .8s forwards}
+.hero-date-badge{margin-top:34px;display:inline-flex;align-items:center;gap:16px;padding:14px 28px;
+  border:1px solid rgba(231,206,126,.55);border-radius:40px;font-size:.78rem;letter-spacing:.14em;
+  color:var(--gold-soft);opacity:0;animation:fadeUp 1s ease 1.05s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;color:var(--gold-soft);
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.85}
+.scroll-cue .bar{width:1px;height:38px;background:linear-gradient(180deg,var(--gold-soft),transparent);animation:cueMove 1.8s ease-in-out infinite}
+@keyframes cueMove{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* ================= SPARKLE ================= */
+.sparkle{position:absolute;pointer-events:none;color:var(--gold-soft);opacity:.55;line-height:1;z-index:1;
+  animation:sparkleFloat 7s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(231,206,126,.45))}
+@keyframes sparkleFloat{0%,100%{transform:translateY(0) rotate(0deg) scale(1)}50%{transform:translateY(-16px) rotate(16deg) scale(1.18)}}
+
+/* ================= QUOTE ================= */
+#quote{padding:120px 0 100px;text-align:center;background:var(--ivory);position:relative;overflow:hidden}
+#quote p{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+  font-size:clamp(1.25rem,3.2vw,1.7rem);color:var(--ink);max-width:680px;margin:0 auto;line-height:1.7}
+#quote .sig{position:relative;z-index:1;margin-top:22px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);letter-spacing:.08em}
+
+/* ================= COUPLE ================= */
+#couple{position:relative;padding:130px 24px;text-align:center;overflow:hidden;background:var(--cream)}
+.sec-title{font-size:clamp(1.9rem,5vw,2.6rem);margin-top:14px;color:var(--ink)}
+.couple-grid{position:relative;margin-top:60px;display:grid;grid-template-columns:1fr;gap:28px;max-width:860px;margin-left:auto;margin-right:auto}
+@media(min-width:720px){.couple-grid{grid-template-columns:1fr auto 1fr;align-items:center}}
+.couple-card{text-align:center;padding:44px 30px 38px;border-radius:6px;position:relative;
+  background:#fff;border:1px solid rgba(201,162,39,.3);box-shadow:0 20px 50px rgba(42,39,48,.08);
+  transition:transform .4s ease,box-shadow .4s ease}
+.couple-card:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(42,39,48,.14)}
+.couple-card::before,.couple-card::after{content:"";position:absolute;width:26px;height:26px;
+  border-top:1px solid var(--gold);border-left:1px solid var(--gold);opacity:.7}
+.couple-card::before{top:10px;left:10px}
+.couple-card::after{bottom:10px;right:10px;border-top:none;border-left:none;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold)}
+.couple-card h3{font-size:1.5rem;color:var(--ink)}
+.couple-card .deg{display:block;margin-top:4px;font-size:.66rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:600}
+.couple-card .role{margin-top:10px;font-size:.76rem;color:var(--ink-soft);letter-spacing:.03em;min-height:1em}
+.couple-card .parents{margin-top:18px;font-size:.82rem;color:var(--ink-soft);line-height:1.9}
+.couple-mid{display:flex;align-items:center;justify-content:center;padding:10px 0}
+.mid-badge{width:64px;height:64px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--gold);
+  background:linear-gradient(135deg,#fff,#FBF3DD);box-shadow:0 10px 24px rgba(201,162,39,.25)}
+
+/* ================= BANNER ================= */
+.banner{position:relative;height:60vh;min-height:360px;overflow:hidden}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kenBurns 24s ease-in-out infinite alternate}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,19,.35),rgba(18,17,19,.75))}
+.banner-text{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:0 24px}
+.banner-text .eyebrow{color:var(--gold-soft)}
+.banner-text h2{margin-top:14px;font-size:clamp(1.8rem,5.4vw,3rem);color:#fff}
+.banner-text .d{margin-top:14px;font-size:.84rem;letter-spacing:.3em;text-transform:uppercase;color:#E7DFCB}
+
+/* ================= COUNTDOWN ================= */
+#countdown-sec{background:var(--black);padding:80px 0;text-align:center}
+#countdown-sec .eyebrow{color:var(--gold-soft)}
+#countdown{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.cd{width:92px;padding:20px 6px 16px;border:1px solid rgba(201,162,39,.4);border-radius:4px;background:rgba(255,255,255,.02)}
+.cd-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:2.1rem;color:var(--gold-soft);transition:transform .22s ease;display:inline-block}
+.cd-num.flip{transform:rotateX(90deg)}
+.cd-label{margin-top:8px;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#C9C2B4}
+#cd-done{display:none;color:var(--gold-soft);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.6rem;margin-top:30px}
+
+/* ================= TIMELINE ================= */
+#events{padding:110px 0;background:var(--ivory);text-align:center}
+.timeline{margin-top:70px;position:relative}
+.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(201,162,39,.35);transform:translateX(-50%)}
+@media(max-width:680px){.timeline::before{left:18px}}
+.t-item{position:relative;width:100%;margin-bottom:54px;display:flex}
+.t-item:nth-child(odd){justify-content:flex-start}
+.t-item:nth-child(even){justify-content:flex-end}
+@media(max-width:680px){.t-item,.t-item:nth-child(even){justify-content:flex-start;padding-left:44px}}
+.t-card{width:min(380px,92%);text-align:left;background:#fff;border:1px solid rgba(201,162,39,.3);
+  padding:26px 28px;border-radius:4px;box-shadow:0 18px 40px rgba(42,39,48,.06);position:relative}
+.t-dot{position:absolute;top:30px;width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--ivory)}
+.t-item:nth-child(odd) .t-dot{right:-5.5px}
+.t-item:nth-child(even) .t-dot{left:-5.5px}
+@media(max-width:680px){.t-dot{left:-26px!important;right:auto!important}}
+.t-date{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.3rem;color:var(--ink)}
+.t-day{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-left:8px}
+.t-name{margin-top:10px;font-size:1.02rem;font-weight:600;color:var(--ink)}
+.t-time{margin-top:4px;font-size:.82rem;color:var(--wine);font-weight:500}
+.t-venue{margin-top:6px;font-size:.78rem;color:var(--ink-soft)}
+.t-badge{display:inline-block;margin-top:10px;padding:4px 12px;border-radius:30px;font-size:.6rem;
+  letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--wine)}
+.t-card.main{border-color:var(--gold);background:linear-gradient(135deg,#fff,#FBF3DD)}
+
+/* ================= VENUE ================= */
+#venue{position:relative;background:var(--black);color:#fff;padding:110px 0;text-align:center;overflow:hidden}
+#venue .eyebrow{color:var(--gold-soft)}
+#venue h2{color:#fff;margin-top:14px;font-size:clamp(1.9rem,5vw,2.6rem)}
+.venue-addr{margin-top:14px;font-size:.84rem;letter-spacing:.1em;line-height:2;color:#D9D2C4;text-transform:uppercase}
+.qr-card{margin:38px auto 0;width:200px;padding:16px 16px 12px;background:#fff;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+#qr{display:flex;justify-content:center}
+#qr img,#qr canvas{width:166px!important;height:166px!important}
+.qr-label{margin-top:10px;font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft)}
+.btn{display:inline-block;margin-top:30px;padding:16px 42px;border:1px solid var(--gold);border-radius:40px;
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);text-decoration:none;transition:.3s}
+.btn:hover{background:var(--gold);color:var(--black)}
+.venue-split{display:grid;grid-template-columns:1fr;gap:60px;margin-top:20px}
+@media(min-width:720px){.venue-split{grid-template-columns:1fr 1px 1fr}}
+.venue-split .sep{background:rgba(201,162,39,.25)}
+.venue-block h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold-soft);font-weight:600}
+
+/* ================= GALLERY ================= */
+#gallery{position:relative;padding:110px 0;background:var(--cream);text-align:center;overflow:hidden}
+.gallery-grid{margin-top:56px;display:grid;grid-template-columns:1fr;gap:26px;max-width:980px;margin-left:auto;margin-right:auto}
+@media(min-width:620px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+.gallery-grid .g-item{position:relative;display:block;overflow:hidden;background:#fff;border-radius:4px;
+  aspect-ratio:4/5;padding:10px;box-shadow:0 18px 40px rgba(42,39,48,.12);
+  opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease,box-shadow .35s ease}
+.gallery-grid .g-item.in{opacity:1;transform:none}
+.gallery-grid .g-item .ph{position:relative;width:100%;height:100%;overflow:hidden;border:1px solid rgba(201,162,39,.3)}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery-grid .g-item:hover{box-shadow:0 26px 54px rgba(42,39,48,.2)}
+.gallery-grid .g-item:hover img{transform:scale(1.08)}
+
+/* ================= GLITTER DUST ================= */
+.glitter-field{position:fixed;inset:0;pointer-events:none;z-index:4;overflow:hidden}
+.glitter{position:absolute;border-radius:50%;background:var(--gold-soft);opacity:0;
+  box-shadow:0 0 6px 1px rgba(231,206,126,.85);
+  animation-name:glitterTwinkle;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+@keyframes glitterTwinkle{
+  0%{opacity:0;transform:translateY(0) scale(.4)}
+  12%{opacity:1;transform:translateY(-10px) scale(1)}
+  88%{opacity:.9;transform:translateY(-90px) scale(.9)}
+  100%{opacity:0;transform:translateY(-130px) scale(.3)}
+}
+
+/* ================= SHIMMER SWEEP ================= */
+.shimmer{background-image:linear-gradient(100deg,var(--shimmer-base) 35%,#fff 50%,var(--shimmer-base) 65%);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+  animation:shimmerSweep 4.5s ease-in-out infinite}
+@keyframes shimmerSweep{0%{background-position:160% 0}100%{background-position:-60% 0}}
+.hero-amp.shimmer{--shimmer-base:var(--gold-soft)}
+.mid-badge.shimmer{--shimmer-base:var(--gold)}
+
+/* ================= MUSIC TOGGLE ================= */
+.music-toggle{position:fixed;bottom:26px;right:26px;z-index:95;width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,#fff,#FBF3DD);border:1px solid var(--gold);color:var(--gold);
+  font-size:1.2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 24px rgba(201,162,39,.35);transition:transform .3s ease}
+.music-toggle:hover{transform:scale(1.08)}
+.music-toggle .music-icon{display:inline-block}
+.music-toggle.playing .music-icon{animation:musicSpin 3.5s linear infinite}
+@keyframes musicSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* ================= FOOTER ================= */
+footer{background:var(--black);color:#D9D2C4;padding:90px 24px 70px;text-align:center}
+footer h2{color:var(--gold-soft);font-style:italic;font-size:clamp(1.8rem,5.6vw,2.4rem)}
+.foot-names{margin-top:20px;font-size:.9rem;letter-spacing:.3em;text-transform:uppercase;color:#fff}
+.foot-date{margin-top:10px;font-size:.66rem;letter-spacing:.34em;color:#9A9286}
+.foot-line{margin-top:40px;font-size:.6rem;letter-spacing:.2em;color:#6E685E;text-transform:uppercase}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .hero-eyebrow,.hero-names,.hero-sub,.hero-date-badge{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-mark">Kiran <b>&amp;</b> Swetha</div>
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#couple">Couple</a>
+    <a href="#events">Events</a>
+    <a href="#venue">Venue</a>
+    <a href="#gallery">Gallery</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <div class="bg"><img src="assets/gallery/photo-3.jpg" alt="Kiran and Swetha"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">The Wedding Of</p>
+    <h1 class="hero-names">Kiran<span class="hero-amp shimmer">&amp;</span>Swetha</h1>
+    <p class="hero-sub">Sunday · 25 October 2026 · Tindivanam</p>
+    <div class="hero-date-badge">
+      <span>25.10.2026</span><span style="opacity:.5">|</span><span>Muhurtham 6:00 — 7:30 AM</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="bar"></span></div>
+  <span class="sparkle" style="top:16%;left:12%;font-size:1.4rem">❀</span>
+  <span class="sparkle" style="top:24%;left:84%;font-size:1.1rem;animation-delay:1s">✦</span>
+  <span class="sparkle" style="top:68%;left:8%;font-size:1rem;animation-delay:2s">✧</span>
+  <span class="sparkle" style="top:60%;left:90%;font-size:1.2rem;animation-delay:3s">❀</span>
+</section>
+
+<!-- ================= QUOTE ================= -->
+<section id="quote" class="reveal">
+  <span class="sparkle" style="top:18%;left:10%;font-size:1.3rem">❀</span>
+  <span class="sparkle" style="top:70%;left:88%;font-size:1rem;animation-delay:1.4s">✦</span>
+  <span class="sparkle" style="top:12%;left:85%;font-size:.9rem;animation-delay:2.6s">✧</span>
+  <div class="container">
+    <p>&ldquo;Two souls, one journey &mdash; bound by love, blessed by family, and guided by the traditions that brought us here.&rdquo;</p>
+    <p class="sig">Kiran &amp; Swetha</p>
+  </div>
+</section>
+
+<!-- ================= COUPLE ================= -->
+<section id="couple" class="reveal">
+  <span class="sparkle" style="top:10%;left:6%;font-size:1.3rem;color:var(--gold)">❀</span>
+  <span class="sparkle" style="top:16%;left:92%;font-size:1rem;color:var(--gold);animation-delay:1.2s">✦</span>
+  <span class="sparkle" style="top:85%;left:10%;font-size:1rem;color:var(--gold);animation-delay:2.1s">✧</span>
+  <span class="sparkle" style="top:80%;left:90%;font-size:1.2rem;color:var(--gold);animation-delay:.6s">❀</span>
+  <div class="container">
+    <p class="eyebrow">With the Blessings Of</p>
+    <h2 class="sec-title">Our Families</h2>
+    <div class="ornament"><span class="orn-line"></span><span class="orn-flower">&#10048;</span><span class="orn-line"></span></div>
+    <div class="couple-grid">
+      <div class="couple-card">
+        <h3>M. Kiran</h3>
+        <span class="deg">MCA</span>
+        <p class="role">Senior Backend Developer, Mukesh Associates, Salem</p>
+        <p class="parents">Son of<br>Mr. S. Murugu Achari &amp;<br>Mrs. M. Ezhilarasi<br>Tindivanam</p>
+      </div>
+      <div class="couple-mid"><div class="mid-badge shimmer">K&amp;S</div></div>
+      <div class="couple-card">
+        <h3>V. Swetha</h3>
+        <span class="deg">BCA, B.Ed.</span>
+        <p class="role">&nbsp;</p>
+        <p class="parents">Daughter of<br>Mr. S. Velmurugan Achari &amp;<br>Mrs. V. Jayalakshmi<br>Chidambaram</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BANNER ================= -->
+<div class="banner">
+  <img src="assets/gallery/photo-6.jpg" alt="Kiran and Swetha">
+  <div class="banner-text">
+    <p class="eyebrow">Save The Date</p>
+    <h2>We're Tying The Knot</h2>
+    <p class="d">Sri Hari Mahal A/C &middot; Tindivanam</p>
+  </div>
+</div>
+
+<!-- ================= COUNTDOWN ================= -->
+<section id="countdown-sec">
+  <div class="container">
+    <p class="eyebrow">Counting Down To</p>
+    <h2 style="color:#fff;margin-top:14px;font-size:clamp(1.6rem,4.4vw,2.2rem)">The Wedding Muhurtham</h2>
+    <div id="countdown" aria-label="Countdown to the wedding">
+      <div class="cd"><div class="cd-num" id="d">--</div><div class="cd-label">Days</div></div>
+      <div class="cd"><div class="cd-num" id="h">--</div><div class="cd-label">Hours</div></div>
+      <div class="cd"><div class="cd-num" id="m">--</div><div class="cd-label">Minutes</div></div>
+      <div class="cd"><div class="cd-num" id="s">--</div><div class="cd-label">Seconds</div></div>
+    </div>
+    <p id="cd-done">The knot has been tied</p>
+  </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section id="events" class="reveal">
+  <div class="container">
+    <p class="eyebrow">Celebration Schedule</p>
+    <h2 class="sec-title">Events</h2>
+    <div class="ornament"><span class="orn-line"></span><span class="orn-flower">&#10048;</span><span class="orn-line"></span></div>
+
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-card">
+          <div class="t-dot"></div>
+          <span class="t-date">21 Oct</span><span class="t-day">Wednesday</span>
+          <p class="t-name">Pandhakaal Muhurtham</p>
+          <p class="t-time">5:00 AM onwards</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-card">
+          <div class="t-dot"></div>
+          <span class="t-date">24 Oct</span><span class="t-day">Saturday</span>
+          <p class="t-name">Reception &amp; Welcome</p>
+          <p class="t-time">6:30 PM onwards</p>
+          <p class="t-venue">Sri Hari Mahal A/C, Mayilam Road, Tindivanam</p>
+          <span class="t-badge">DJ Night</span>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-card main">
+          <div class="t-dot"></div>
+          <span class="t-date">25 Oct</span><span class="t-day">Sunday</span>
+          <p class="t-name">Wedding Muhurtham</p>
+          <p class="t-time">6:00 — 7:30 AM</p>
+          <p class="t-venue">Sri Hari Mahal A/C, Mayilam Road, Tindivanam</p>
+          <span class="t-badge" style="background:var(--gold);color:#1C1B1E">Main Ceremony</span>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-card">
+          <div class="t-dot"></div>
+          <span class="t-date">28 Oct</span><span class="t-day">Wednesday</span>
+          <p class="t-name">Reception at Chidambaram</p>
+          <p class="t-time">6:00 PM onwards</p>
+          <p class="t-venue">G.M. Vandaiyar Kalyana Mandapam, S.P. Koil Street, Chidambaram</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VENUE ================= -->
+<section id="venue" class="reveal">
+  <span class="sparkle" style="top:10%;left:6%;font-size:1.2rem">❀</span>
+  <span class="sparkle" style="top:85%;left:92%;font-size:1rem;animation-delay:1.8s">✦</span>
+  <div class="container">
+    <p class="eyebrow">The Venue</p>
+    <h2>Sri Hari Mahal A/C</h2>
+    <p class="venue-addr">Mayilam Road, Tindivanam &middot; Tamil Nadu</p>
+    <div class="qr-card">
+      <div id="qr"></div>
+      <p class="qr-label">Scan for location</p>
+    </div>
+    <br>
+    <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/rMUP7Vz9v7TWVQUJ7?g_st=ac">Get Directions</a>
+
+    <div class="venue-split">
+      <div class="venue-block">
+        <h3>Main Ceremony</h3>
+        <p class="venue-addr">Sri Hari Mahal A/C<br>Mayilam Road, Tindivanam<br>25 Oct, 6:00 — 7:30 AM</p>
+      </div>
+      <div class="sep"></div>
+      <div class="venue-block">
+        <h3>Chidambaram Reception</h3>
+        <p class="venue-addr">G.M. Vandaiyar Kalyana Mandapam<br>S.P. Koil Street, Chidambaram<br>28 Oct, 6:00 PM onwards</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="reveal">
+  <span class="sparkle" style="top:8%;left:8%;font-size:1.2rem">❀</span>
+  <span class="sparkle" style="top:14%;left:90%;font-size:1rem;animation-delay:1.5s">✦</span>
+  <span class="sparkle" style="top:92%;left:12%;font-size:1rem;animation-delay:2.4s">✧</span>
+  <div class="container">
+    <p class="eyebrow">Our Moments</p>
+    <h2 class="sec-title">Gallery</h2>
+    <div class="ornament"><span class="orn-line"></span><span class="orn-flower">&#10048;</span><span class="orn-line"></span></div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="g-item"><div class="ph"><img loading="lazy" src="assets/gallery/photo-2.jpg" alt="Kiran and Swetha"></div></div>
+      <div class="g-item"><div class="ph"><img loading="lazy" src="assets/gallery/photo-1.jpg" alt="Kiran and Swetha"></div></div>
+      <div class="g-item"><div class="ph"><img loading="lazy" src="assets/gallery/photo-5.jpg" alt="Kiran and Swetha"></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="reveal">
+  <h2>With Love &amp; Blessings</h2>
+  <p class="foot-names">Kiran &nbsp;&amp;&nbsp; Swetha</p>
+  <p class="foot-date">25 October 2026 &middot; Tindivanam</p>
+  <p class="foot-line">Thank You For Being Part Of Our Story</p>
+</footer>
+
+<button id="musicToggle" class="music-toggle" aria-label="Toggle background music">
+  <span class="music-icon">&#9834;</span>
+</button>
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solid on scroll + active link */
+  var nav = document.getElementById('nav');
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('solid', window.scrollY > 80);
+  }, {passive:true});
+
+  var io2 = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        navLinks.forEach(function(a){
+          a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+        });
+      }
+    });
+  }, {threshold:.5});
+  sections.forEach(function(s){ io2.observe(s); });
+
+  /* scroll reveal */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* gallery stagger reveal */
+  var galleryItems = document.querySelectorAll('.gallery-grid .g-item');
+  var io3 = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var idx = Array.prototype.indexOf.call(galleryItems, en.target);
+        setTimeout(function(){ en.target.classList.add('in'); }, idx * 140);
+        io3.unobserve(en.target);
+      }
+    });
+  }, {threshold:.15});
+  galleryItems.forEach(function(el){ io3.observe(el); });
+
+  /* glitter dust overlay */
+  if(!reduced){
+    var gField = document.createElement('div');
+    gField.className = 'glitter-field';
+    document.body.appendChild(gField);
+    var glitterCount = window.innerWidth < 640 ? 26 : 46;
+    for(var gi=0; gi<glitterCount; gi++){
+      var g = document.createElement('span');
+      g.className = 'glitter';
+      var size = (Math.random()*2.6 + 1.4).toFixed(1);
+      g.style.width = size+'px';
+      g.style.height = size+'px';
+      g.style.left = (Math.random()*100)+'%';
+      g.style.top = (Math.random()*100)+'%';
+      var dur = (Math.random()*5 + 4.5).toFixed(2);
+      g.style.animationDuration = dur+'s';
+      g.style.animationDelay = (Math.random()*dur*-1).toFixed(2)+'s';
+      gField.appendChild(g);
+    }
+  }
+
+  /* hero parallax */
+  var heroBg = document.querySelector('#hero .bg');
+  if(!reduced && heroBg){
+    window.addEventListener('scroll', function(){
+      var sc = Math.min(window.scrollY, 700);
+      heroBg.style.transform = 'scale(1.06) translateY(' + (sc * 0.18) + 'px)';
+    }, {passive:true});
+  }
+
+  /* countdown — 25 Oct 2026, 6:00 AM IST (muhurtham) */
+  var target = new Date('2026-10-25T06:00:00+05:30').getTime();
+  var d=document.getElementById('d'), h=document.getElementById('h'),
+      m=document.getElementById('m'), s=document.getElementById('s');
+  function pad(n){ return n<10 ? '0'+n : ''+n; }
+  function setNum(el, val){
+    if(el.textContent !== val){
+      if(reduced){ el.textContent = val; return; }
+      el.classList.add('flip');
+      setTimeout(function(){ el.textContent = val; el.classList.remove('flip'); }, 200);
+    }
+  }
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      document.getElementById('countdown').style.display = 'none';
+      document.getElementById('cd-done').style.display = 'block';
+      clearInterval(timer);
+      return;
+    }
+    setNum(d, pad(Math.floor(diff / 86400000)));
+    setNum(h, pad(Math.floor(diff / 3600000) % 24));
+    setNum(m, pad(Math.floor(diff / 60000) % 60));
+    setNum(s, pad(Math.floor(diff / 1000) % 60));
+  }
+  tick();
+  var timer = setInterval(tick, 1000);
+
+  /* QR */
+  try{
+    new QRCode(document.getElementById('qr'), {
+      text: 'https://maps.app.goo.gl/rMUP7Vz9v7TWVQUJ7?g_st=ac',
+      width: 166, height: 166,
+      colorDark: '#121113', colorLight: '#FFFFFF',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }catch(e){
+    document.querySelector('.qr-card').style.display = 'none';
+  }
+
+  /* background music — autoplay by default */
+  var music = document.getElementById('bgMusic');
+  var musicBtn = document.getElementById('musicToggle');
+  var musicIcon = musicBtn.querySelector('.music-icon');
+  var playing = false;
+  music.volume = 0.5;
+
+  function setPlayingUI(isPlaying){
+    playing = isPlaying;
+    musicBtn.classList.toggle('playing', isPlaying);
+    musicIcon.innerHTML = isPlaying ? '&#10074;&#10074;' : '&#9834;';
+  }
+
+  function tryAutoplay(){
+    music.play().then(function(){
+      setPlayingUI(true);
+    }).catch(function(){
+      /* blocked by browser — start on first user interaction */
+      var startOnInteract = function(){
+        music.play().then(function(){ setPlayingUI(true); }).catch(function(){});
+        document.removeEventListener('click', startOnInteract);
+        document.removeEventListener('touchstart', startOnInteract);
+        document.removeEventListener('keydown', startOnInteract);
+        document.removeEventListener('wheel', startOnInteract);
+        document.removeEventListener('scroll', startOnInteract);
+      };
+      document.addEventListener('click', startOnInteract);
+      document.addEventListener('touchstart', startOnInteract);
+      document.addEventListener('keydown', startOnInteract);
+      document.addEventListener('wheel', startOnInteract, {passive:true});
+      document.addEventListener('scroll', startOnInteract, {passive:true});
+    });
+  }
+  tryAutoplay();
+
+  musicBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    if(playing){
+      music.pause();
+      setPlayingUI(false);
+    }else{
+      music.play().then(function(){ setPlayingUI(true); }).catch(function(){});
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
